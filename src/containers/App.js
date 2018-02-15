@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
-import TodoForm from '../components/TodoForm';
-import TodoList from '../components/TodoList';
+import TodoForm from '../components/BookForm';
+import TodoList from '../components/BookList';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,6 +39,10 @@ class App extends React.Component {
   addTodo(val) {
     const todo = {
       text: val,
+      title: val,
+      author: val,
+      year: val,
+      genere: val,
       id: uuid.v4(),
     };
     const data = [...this.state.data, todo];
