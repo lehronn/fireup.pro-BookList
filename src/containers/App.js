@@ -13,13 +13,25 @@ class App extends React.Component {
       data: [
         {
         id: 1,
-            text: 'clean room'
+            text: 'clean room',
+            title: 'ABC of Math',
+            author: 'Aleksander Fredra',
+            year: '1965',
+            genere: 'Fantasy'
         }, {
         id: 2,
-            text: 'wash the dishes'
+            text: 'wash the dishes',
+            title: 'Sey Hi Book',
+            author: 'Mickiewicz Adam',
+            year: '1689',
+            genere: 'Poems'
         }, {
         id: 3,
-            text: 'feed my cat'
+            text: 'feed my cat',
+            title: 'About my cats',
+            author: 'Kowalski Piotr',
+            year: '2002',
+            genere: 'Classics'
         }
       ]
     };

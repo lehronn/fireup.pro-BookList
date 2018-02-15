@@ -12,7 +12,12 @@ class TodoList extends React.Component {
       <div className={style.TodoList}>
         <ul>{this.props.data.map(item => (
           <li key={item.id}>
-            {item.text}
+            <p>Text: {item.text}</p>
+            <p>Title: {item.title}</p>
+            <p>Author: {item.author}</p>
+            <p>Year: {item.year}</p>
+            <p>Genere: {item.genere}</p>
+            <button className="editButton" onClick={()=> this.props.remove(item.id)}>Edit</button>
             <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
           </li>
         ))}</ul>
