@@ -1,4 +1,4 @@
-import { ADD_BOOK, EDIT_BOOK, REMOVE_BOOK } from './Actions.js';
+import { ADD_BOOK, EDIT_BOOK, REMOVE_BOOK } from '../actions.js';
 
 function books(state = [], action) {
   switch (action.type) {
@@ -15,20 +15,9 @@ function books(state = [], action) {
     case REMOVE_BOOK:
       return
       state.filter(book => book.id !== action.id);
-    case EDIT_BOOK:
-      return state.map(book => { //DO NAPISANIA OD PODSTAW
-        if (book.id === action.id) {
-          return { ...book,
-              id: action.id,
-              title: action.title,
-              author: action.author,
-              year: action.year,
-              genere: action.genere
-            },
-          }
-        }
-        return book;
-      });
+    // case EDIT_BOOK:
+    //     return book;
+    //   });
 
     default:
       return state;

@@ -4,9 +4,9 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
 import { createStore } from 'redux';
-// import reducer from './reducer.js'; CZY POTZRZEBNE COMBINE?
+import reducer from './reducer.js';
 
-const store = createStore(reducer); //magazyn utworzony.
+const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -14,7 +14,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app')
 );
-
 
 if (module.hot) {
   module.hot.accept('./containers/App', () => {

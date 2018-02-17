@@ -1,7 +1,9 @@
-import TodoForm from './BookForm';
+import React from 'react';
+import PropTypes from 'prop-types';
+import BookForm from './BookForm';
 import style from './Book.css';
 
-class Todo extends React.Component {
+class Book extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -20,9 +22,9 @@ class Todo extends React.Component {
   }
 }
 
-TodoList.propTypes = {
+Book.propTypes = {
   remove: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired
 };
 
-export default Todo;
+export default Book;

@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './BookList.css';
+import {addBook, removeBook, editBook} from '../actions'
+import Book from '../containers/BookContainer';
 
-class TodoList extends React.Component {
+class BookList extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -12,13 +14,12 @@ class TodoList extends React.Component {
       <div className={style.TodoList}>
         <ul>{this.props.data.map(item => (
           <li key={item.id}>
-            <p>Text: {item.text}</p>
             <p>Title: {item.title}</p>
             <p>Author: {item.author}</p>
             <p>Year: {item.year}</p>
             <p>Genere: {item.genere}</p>
-            <button className="editButton" onClick={()=> this.props.remove(item.id)}>Edit</button>
-            <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
+            <button className="editButton" onClick={()=> editBook(id,title, author, year, genere)}>Edit</button>
+            <button className="removeButton" onClick={()=> removeBook(id)}>Delete</button>
           </li>
         ))}</ul>
       </div>
@@ -26,9 +27,9 @@ class TodoList extends React.Component {
   }
 }
 
-TodoList.propTypes = {
+BookList.propTypes = {
   remove: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired
 };
 
-export default TodoList;
+export default BookList;
