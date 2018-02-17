@@ -8,7 +8,7 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 //actions creators
 export const addBook = (title, author, year, genere) => ({
   type: 'ADD_BOOK',
-  id: v4(),
+  id: uuid.v4(),
   title,
   author,
   year,

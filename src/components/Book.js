@@ -4,7 +4,7 @@ import BookForm from './BookForm';
 import style from './Book.css';
 
 class Book extends React.Component {
-  constructor(props) {
+  constructor(props, id, author, title, genere, year) {
     super(props);
   }
 
@@ -22,9 +22,9 @@ class Book extends React.Component {
   }
 }
 
-Book.propTypes = {
-  remove: PropTypes.func.isRequired,
-  data: PropTypes.array.isRequired
-};
+// Book.propTypes = {
+//   remove: PropTypes.func.isRequired,
+//   data: PropTypes.array.isRequired
+// };
 
 export default Book;

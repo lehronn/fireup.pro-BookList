@@ -1,17 +1,9 @@
 import { ADD_BOOK, EDIT_BOOK, REMOVE_BOOK } from '../actions.js';
 
-function books(state = [], action) {
+function Books(state = [], action) {
   switch (action.type) {
     case ADD_BOOK:
-      return [{
-        id: action.id,
-        title: action.title,
-        author: action.author,
-        year: action.year,
-        genere: action.genere
-      },
-      ...state
-      ];
+      return console.log('test');
     case REMOVE_BOOK:
       return
       state.filter(book => book.id !== action.id);
@@ -24,4 +16,4 @@ function books(state = [], action) {
   }
 };
 
-export default books;
+export default Books;

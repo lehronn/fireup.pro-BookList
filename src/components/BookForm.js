@@ -21,19 +21,19 @@ class BookForm extends React.Component {
           <form className="TodoForm" onSubmit={this.onSubmitHandler}>
           <p>
             <label>Title:</label>
-            <input type="text" value={this.state.title} onChange={(event) => this.onChange(event)}/>
+            <input type="text"/>
           </p>
           <p>
             <label>Author:</label>
-            <input type="text" value={this.state.author} onChange={(event) => this.onChange(event)}/>
+            <input type="text"/>
           </p>
           <p>
             <label>Year:</label>
-            <input type="text" value={this.state.year} onChange={(event) => this.onChange(event)}/>
+            <input type="text"/>
           </p>
           <p>
             <label>Genere:</label>
-            <select value={this.state.genere} onChange={(event) => this.onChange(event)}>
+            <select value={this.state.genere}>
               <option value="Si-Fi">Si-Fi</option>
               <option value="Fantasy">Fantasy</option>
               <option selected value="Classics">Classics</option>
@@ -46,9 +46,9 @@ class BookForm extends React.Component {
     );
   }
 }
-    //walidacja proptypes i props default
-BookForm.propTypes = {
-      add: PropTypes.func.isRequired,
-    };
+
+// BookForm.propTypes = {
+//       add: PropTypes.func.isRequired,
+//     };
 
 export default BookForm;

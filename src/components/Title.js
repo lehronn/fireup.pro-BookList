@@ -8,7 +8,7 @@ class Title extends React.Component {
     return (
       <div className={style.TodoTitle}>
       <h1>Booknatics.js</h1>
-      <p>List item to do:<span> {this.props.todoCount}</span>
+      <p>List item to do:<span> {this.props.bookCount}</span>
       </p>
       </div>
     );

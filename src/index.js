@@ -5,8 +5,13 @@ import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
 import { createStore } from 'redux';
 import reducer from './reducer.js';
+import {addBook} from './actions';
 
 const store = createStore(reducer);
+
+store.dispatch(addBook('Title A', 'Author Z', '1967', 'Poems'));
+store.dispatch(addBook('Title C', 'Author X', '1927', 'Fantasy'));
+store.dispatch(addBook('Title B', 'Author Y', '1977', 'Poems'));
 
 ReactDOM.render(
   <Provider store={store}>
