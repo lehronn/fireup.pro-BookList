@@ -9,9 +9,7 @@ import {addBook} from './actions';
 
 const store = createStore(reducer);
 
-store.dispatch(addBook('Title A', 'Author Z', '1967', 'Poems'));
-store.dispatch(addBook('Title C', 'Author X', '1927', 'Fantasy'));
-store.dispatch(addBook('Title B', 'Author Y', '1977', 'Poems'));
+store.dispatch(addBook({title: 'aaa', author: 'bbb', year: '1112', genere: 'Fantasy'}));
 
 ReactDOM.render(
   <Provider store={store}>
