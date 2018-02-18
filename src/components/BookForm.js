@@ -16,11 +16,6 @@ class BookForm extends React.Component {
     }
   }
 
-  handleUserInput (e) {
-    const value = e.target.value;
-    this.setState({[name]: value});
-  }
-
   onSubmitHandler (e) {
     e.preventDefault();
     console.dir(e.target);

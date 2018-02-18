@@ -3,7 +3,7 @@ import Book from '../components/Book';
 import {addBook, removeBook, editBook} from '../actions'
 
 const mapDispatchToProps = dispatch => ({
-  addBook: (title, author, year, genere) => dispatch(addBook(title, author, year, genere)),
+  addBook: (addedBook) => dispatch(addBook(addedBook)),
   removeBook: (id) => dispatch(removeBook(id)),
   editBook: (id) => dispatch(editBook(id))
 

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
 import { createStore } from 'redux';
-import reducer from './reducer.js';
+import reducer from './reducers/reducer.js';
 import {addBook} from './actions';
 
 const store = createStore(reducer);

@@ -8,6 +8,9 @@ import Book from '../containers/BookContainer';
 
 const BookList = (props) => {
   console.dir(props);
+  console.log(props);
+  console.dir(props.book);
+  console.dir(props.books);
   <div className={style.bookList}>
     <ul>
       props.books.map(({ title, author, year, genere }) =>
