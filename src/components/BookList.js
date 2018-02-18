@@ -5,18 +5,21 @@ import style from './BookList.css';
 import {addBook, removeBook, editBook} from '../actions'
 import Book from '../containers/bookContainer';
 
+let title, author, year, genere;
 
 const BookList = (props) => {
   console.dir(props);
   console.log(props);
   console.dir(props.book);
   console.dir(props.books);
-  <div className={style.bookList}>
-    <ul>
-      props.books.map(({ props.book }) =>
-      <li>{title}-{author}-{year}-{genere}</li>)
-      </ul>
-    </div>
+  return (
+    <div className={style.bookList}>
+      <ul>
+        {props.books.map(({ props }) =>
+        <li>{title}-{author}-{year}-{genere}</li>)}
+        </ul>
+      </div>
+  )
 };
 
 // BookList.propTypes = {
