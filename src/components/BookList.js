@@ -6,14 +6,15 @@ import {addBook, removeBook, editBook} from '../actions'
 import Book from '../containers/BookContainer';
 
 
-const BookList = ({ props }) =>
+const BookList = (props) => {
+  console.dir(props);
   <div className={style.bookList}>
     <ul>
       props.books.map(({ title, author, year, genere }) =>
       <li>{title}-{author}-{year}-{genere}</li>)
-    </ul>
-  </div>
-;
+      </ul>
+    </div>
+};
 
 // BookList.propTypes = {
 //   remove: PropTypes.func.isRequired,
