@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import style from './BookList.css';
 import {addBook, removeBook, editBook} from '../actions'
-import Book from '../containers/BookContainer';
+import Book from '../containers/bookContainer';
 
 
 const BookList = (props) => {
@@ -13,7 +13,7 @@ const BookList = (props) => {
   console.dir(props.books);
   <div className={style.bookList}>
     <ul>
-      props.books.map(({ title, author, year, genere }) =>
+      props.books.map(({ props.book }) =>
       <li>{title}-{author}-{year}-{genere}</li>)
       </ul>
     </div>
