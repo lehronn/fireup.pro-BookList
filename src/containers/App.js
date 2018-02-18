@@ -13,10 +13,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={style.TodoApp}>
-        <Title className={style.TodoTitle}/>
-        <BookForm className={style.TodoForm}/>
-        <BookList className={style.TodoList}/>
+      <div className={style.bookApp}>
+        <Title className={style.bookTitle}/>
+        <BookForm className={style.bookForm}/>
+        <BookList className={style.bookList}/>
       </div>
     );
   }

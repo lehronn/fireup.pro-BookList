@@ -6,10 +6,13 @@ class Title extends React.Component {
 
   render() {
     return (
-      <div className={style.TodoTitle}>
+      <div className={style.bookTitle}>
       <h1>Booknatics.js</h1>
-      <p>List item to do:<span> {this.props.bookCount}</span>
-      </p>
+      <p>Books:<span> {this.props.bookCount}</span></p>
+      <p>Classics:<span> {this.props.bookCount}</span></p>
+      <p>Sy-Fis:<span> {this.props.bookCount}</span></p>
+      <p>Fantasy:<span> {this.props.bookCount}</span></p>
+      <p>Poems:<span> {this.props.bookCount}</span></p>
       </div>
     );
   }

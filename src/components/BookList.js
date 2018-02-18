@@ -7,12 +7,20 @@ import Book from '../containers/BookContainer';
 class BookList extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { books: {}}
   }
 
   render() {
     return (
-      <div className={style.TodoList}>
-        
+      <div className={style.bookList}>
+        const mapStateToProps = state => (
+          { books: state.books }
+          <ul>
+            {books.map(({ title, author, year, genere }) =>
+              <li>{title}-{author}-{year}-{genere}</li>
+            )}
+          </ul>
+        );
       </div>
     );
   }
@@ -23,4 +31,5 @@ class BookList extends React.Component {
 //   data: PropTypes.array.isRequired
 // };
 
-export default BookList;
+// export default BookList;
+export default connect (mapStateToProps) (BookList);

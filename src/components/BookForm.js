@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import style from './BookForm.css';
 import {addBook, removeBook, editBook} from '../actions';
 
+let addedBook = {};
+
 class BookForm extends React.Component {
   constructor(props) {
     super(props);
@@ -10,37 +12,66 @@ class BookForm extends React.Component {
       title: '',
       author: '',
       year: '',
-      genere: ''
+      genere: '',
     }
   }
 
+  handleUserInput (e) {
+    const value = e.target.value;
+    this.setState({[name]: value});
+  }
+
+  onSubmitHandler (e) {
+    e.preventDefault();
+    console.dir(e.target);
+    console.log(e.target[0].value);
+    console.log(e.target[1].value);
+    console.log(e.target[2].value);
+    console.log(e.target[3].value);
+
+    if (e.target[0].value == null ||
+    e.target[1].value == null ||
+    e.target[2].value == null)
+    {alert('All informations, please.')};
+
+    let book = {
+      title: e.target[0].value,
+      author: e.target[1].value,
+      year: e.target[2].value,
+      genere: e.target[3].value
+    };
+        return addedBook;
+}
+
   render() {
     return (
-      <div className={style.TodoForm}>
+      <div className={style.bookForm}>
         <span>Add book here:</span>
-          <form className="TodoForm" onSubmit={this.onSubmitHandler}>
+          <form className={style.bookForm} onSubmit={this.onSubmitHandler}>
           <p>
-            <label>Title:</label>
-            <input type="text"/>
+            <label>Title:
+              <input type="text" name="title" ref={node => (this.inputNode = node)}/>
+            </label>
           </p>
           <p>
-            <label>Author:</label>
-            <input type="text"/>
+            <label>Author:
+              <input type="text" name="author" ref={node => (this.inputNode = node)}/>
+            </label>
           </p>
           <p>
-            <label>Year:</label>
-            <input type="text"/>
+            <label>Year:
+              <input type="text" name="year" ref={node => (this.inputNode = node)}/>
+            </label>
           </p>
           <p>
             <label>Genere:</label>
-            <select value={this.state.genere}>
-              <option value="Si-Fi">Si-Fi</option>
-              <option value="Fantasy">Fantasy</option>
-              <option selected value="Classics">Classics</option>
-              <option value="Poems">Poems</option>
-            </select>
+              <select name="genere" ref={node => (this.inputNode = node)}>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Classics">Classics</option>
+              </select>
           </p>
-          <button className="addButton" onClick={()=> addBook(title, author, year, genere)}>Add</button>
+          <button type="submit" className="addButton" onClick={()=> addBook(addedBook)}>Add</button>
         </form>
       </div>
     );

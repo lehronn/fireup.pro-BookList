@@ -6,13 +6,13 @@ const EDIT_BOOK = 'EDIT_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
 //actions creators
-export const addBook = (title, author, year, genere) => ({
+export const addBook = (addedBook) => ({
   type: 'ADD_BOOK',
   id: uuid.v4(),
-  title,
-  author,
-  year,
-  genere
+  title: addedBook.title,
+  author: addedBook.author,
+  year: addedBook.year,
+  genere : addedBook.genere
 });
 
 export const editBook = (id) => ({

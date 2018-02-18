@@ -10,7 +10,7 @@ class Book extends React.Component {
 
   render() {
     return (
-      <div className={style.TodoList}>
+      <div className={style.bookList}>
         {this.props.data.map(item => (
           <span>
             {item.text}

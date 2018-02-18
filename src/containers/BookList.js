@@ -1,8 +1,10 @@
 import {connect} from 'react-redux';
 import BookList from '../BookList';
 
-const mapStateToProps = state => ({
-  books: state.books
-});
+class BookList extends React.Component {
+  constructor() {
+    super();
+    this.state = { books: {}}
+  }
 
 export default connect (mapStateToProps) (BookList);
