@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Book from '../components/Book';
+import BookForm from '../components/BookForm';
 import {addBook, removeBook, editBook} from '../actions'
 
 const mapDispatchToProps = dispatch => ({
@@ -9,4 +9,4 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-export default connect(null, mapDispatchToProps)(Book);
+export default connect(null, mapDispatchToProps)(BookForm);

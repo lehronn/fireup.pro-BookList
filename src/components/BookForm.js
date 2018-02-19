@@ -18,12 +18,6 @@ class BookForm extends React.Component {
 
   onSubmitHandler (e) {
     e.preventDefault();
-    console.dir(e.target);
-    console.log(e.target[0].value);
-    console.log(e.target[1].value);
-    console.log(e.target[2].value);
-    console.log(e.target[3].value);
-
     if (
       e.target[0].value == '' ||
       e.target[1].value == '' ||
@@ -39,6 +33,8 @@ class BookForm extends React.Component {
           year: e.target[2].value,
           genere: e.target[3].value
         };
+        console.log('addedBook:');
+        console.dir(addedBook);
         return addBook(addedBook);
       }
 }

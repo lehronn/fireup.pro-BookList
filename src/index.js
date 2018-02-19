@@ -11,6 +11,7 @@ const store = createStore(reducer);
 store.subscribe(() => console.log(store.getState()))
 
 store.dispatch(addBook({title: 'aaa', author: 'bbb', year: '1112', genere: 'Fantasy'}));
+store.dispatch(addBook({title: 'xxx', author: 'yyy', year: '2124', genere: 'Classics'}));
 
 ReactDOM.render(
   <Provider store={store}>
