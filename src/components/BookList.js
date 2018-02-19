@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import style from './BookList.css';
 import {addBook, removeBook, editBook} from '../actions'
-import Book from '../containers/bookContainer';
+
 
 // const mapStateToProps = (state) => {
 //   return { books: state.items }; //czy dobrze opisany obiekt state?
