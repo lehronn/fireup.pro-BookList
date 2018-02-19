@@ -12,18 +12,14 @@ import Book from '../containers/bookContainer';
 let title, author, year, genere;
 
 const BookList = (props) => {
-  console.dir(props);
-  console.log(props);
-  console.dir(props.book);
-  console.dir(props.books);
   return (
     <div className={style.bookList}>
       <ul>
-        <li>{title}-{author}-{year}-{genere}</li>)}
+        <li>{title}-{author}-{year}-{genere}</li>)
         </ul>
       </div>
   )
-};
+}
 
 // BookList.propTypes = {
 //   remove: PropTypes.func.isRequired,

@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
-import { createStore } from 'redux';
 import reducer from './reducers/reducer.js';
 import {addBook} from './actions';
 
 const store = createStore(reducer);
+store.subscribe(() => console.log(store.getState()))
 
 store.dispatch(addBook({title: 'aaa', author: 'bbb', year: '1112', genere: 'Fantasy'}));
 

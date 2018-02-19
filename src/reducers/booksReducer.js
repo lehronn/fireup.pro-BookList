@@ -1,6 +1,6 @@
 import { ADD_BOOK, EDIT_BOOK, REMOVE_BOOK } from '../actions.js';
 
-function Books(state = [], action) {
+function Books(state = {}, action) {
   switch (action.type) {
     case ADD_BOOK:
       return Object.assign({}, state, {
@@ -15,8 +15,9 @@ function Books(state = [], action) {
                 , ...state]
             })
     case REMOVE_BOOK:
-      return
-      state.filter(book => book.id !== action.id);
+      return Object.assign({}, state, {
+                books: state.books.filter(book => book.id !== action.id)
+            });
     // case EDIT_BOOK:
     //     return book;
     //   });

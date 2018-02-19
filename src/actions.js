@@ -1,9 +1,9 @@
 import uuid from 'uuid'; // import unical id generator
 
 //actions objects
-const ADD_BOOK = 'ADD_BOOK';
-const EDIT_BOOK = 'EDIT_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+export const ADD_BOOK = 'ADD_BOOK';
+export const EDIT_BOOK = 'EDIT_BOOK';
+export const REMOVE_BOOK = 'REMOVE_BOOK';
 
 //actions creators
 export const addBook = (addedBook) => ({
