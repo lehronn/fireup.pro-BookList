@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './BookForm.css';
 import {addBook, removeBook, editBook} from '../actions';
+import bookFormContainer from '../containers/bookFormContainer';
 
 let addedBook = {};
 
@@ -35,15 +36,21 @@ class BookForm extends React.Component {
         };
         console.log('addedBook:');
         console.dir(addedBook);
-        return addBook(addedBook);
+        console.log('propsy w :');
+        console.dir(this.props);
+        console.log(this.props);
+        return this.props.addBook(addedBook);
       }
 }
 
   render() {
+    console.log('Propsy w renderze:');
+    console.dir(this.props);
+    console.log(this.props);
     return (
       <div className={style.bookForm}>
         <span>Add book here:</span>
-          <form className={style.bookForm} onSubmit={this.onSubmitHandler}>
+          <form className={style.bookForm} onSubmit={(e) => this.onSubmitHandler(e)}>
           <p>
             <label>Title:
               <input type="text" name="title" ref={node => (this.inputNode = node)}/>
