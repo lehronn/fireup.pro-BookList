@@ -33,13 +33,13 @@ class BookForm extends React.Component {
         return false;
       }
       else {
-        let book = {
+        let addedBook = {
           title: e.target[0].value,
           author: e.target[1].value,
           year: e.target[2].value,
           genere: e.target[3].value
         };
-        return addedBook;
+        return addBook(addedBook);
       }
 }
 
@@ -71,7 +71,7 @@ class BookForm extends React.Component {
                 <option value="Classics">Classics</option>
               </select>
           </p>
-          <button type="submit" className="addButton" onClick={()=> addBook(addedBook)}>Add</button>
+          <button type="submit" className="addButton">Add</button>
         </form>
       </div>
     );
