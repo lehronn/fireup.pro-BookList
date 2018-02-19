@@ -36,7 +36,7 @@ class BookForm extends React.Component {
         };
         console.log('addedBook:');
         console.dir(addedBook);
-        console.log('propsy w :');
+        console.log('propsy w on submithandler w bookform:');
         console.dir(this.props);
         console.log(this.props);
         return this.props.addBook(addedBook);
@@ -44,7 +44,7 @@ class BookForm extends React.Component {
 }
 
   render() {
-    console.log('Propsy w renderze:');
+    console.log('Propsy w renderze bookform:');
     console.dir(this.props);
     console.log(this.props);
     return (

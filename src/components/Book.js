@@ -9,11 +9,14 @@ class Book extends React.Component {
   }
 
   render() {
+    console.log('propsy w komponencie book:');
+    console.dir(this.props);
+    console.log(this.props);
     return (
       <div className={style.bookList}>
-        {this.props.data.map(item => (
+        {this.props.map(item => (
           <span>
-            {item.text}
+            {item.title}
             <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
           </span>
         ))}
