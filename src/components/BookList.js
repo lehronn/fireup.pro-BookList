@@ -5,6 +5,10 @@ import style from './BookList.css';
 import {addBook, removeBook, editBook} from '../actions'
 import Book from '../containers/bookContainer';
 
+// const mapStateToProps = (state) => {
+//   return { books: state.items }; //czy dobrze opisany obiekt state?
+// };
+
 let title, author, year, genere;
 
 const BookList = (props) => {
@@ -15,7 +19,6 @@ const BookList = (props) => {
   return (
     <div className={style.bookList}>
       <ul>
-        {props.books.map(({ props }) =>
         <li>{title}-{author}-{year}-{genere}</li>)}
         </ul>
       </div>

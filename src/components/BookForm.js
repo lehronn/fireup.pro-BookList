@@ -23,20 +23,24 @@ class BookForm extends React.Component {
     console.log(e.target[1].value);
     console.log(e.target[2].value);
     console.log(e.target[3].value);
-    console.log(typeof e.target[0].value);
 
-    if (e.target[0].value == '' ||
-    e.target[1].value == '' ||
-    e.target[2].value == '')
-    {alert('All informations, please.')};
-
-    let book = {
-      title: e.target[0].value,
-      author: e.target[1].value,
-      year: e.target[2].value,
-      genere: e.target[3].value
-    };
+    if (
+      e.target[0].value == '' ||
+      e.target[1].value == '' ||
+      e.target[2].value == '')
+      {
+        alert('All informations, please.');
+        return false;
+      }
+      else {
+        let book = {
+          title: e.target[0].value,
+          author: e.target[1].value,
+          year: e.target[2].value,
+          genere: e.target[3].value
+        };
         return addedBook;
+      }
 }
 
   render() {
