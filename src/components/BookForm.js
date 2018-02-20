@@ -9,12 +9,6 @@ let addedBook = {};
 class BookForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: '',
-      author: '',
-      year: '',
-      genere: '',
-    }
   }
 
   onSubmitHandler (e) {

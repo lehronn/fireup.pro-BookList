@@ -3,7 +3,7 @@ import { ADD_BOOK, EDIT_BOOK, REMOVE_BOOK } from '../actions.js';
 function Books(state = {}, action) {
   switch (action.type) {
     case ADD_BOOK:
-      return Object.assign({}, state, {
+      return Object.assign({}, state.books, {
                 books: [
                 {
                   id: action.id,

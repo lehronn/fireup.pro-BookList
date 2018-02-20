@@ -4,7 +4,7 @@ import BookForm from './BookForm';
 import style from './Book.css';
 
 class Book extends React.Component {
-  constructor(props, id, author, title, genere, year) {
+  constructor(props) {
     super(props);
   }
 
@@ -12,6 +12,7 @@ class Book extends React.Component {
     console.log('propsy w komponencie book:');
     console.dir(this.props);
     console.log(this.props);
+
     return (
       <div className={style.bookList}>
         {this.props.map(item => (

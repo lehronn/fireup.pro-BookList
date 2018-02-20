@@ -12,7 +12,8 @@ let title, author, year, genere;
     console.dir(props);
     console.log(props);
     return (
-      <ul>{props.books.books.map(books => <Book key={books.id} {...books}/>)}</ul>
+      <div></div>
+       // <ul>{props.books.books.map(books => <Book key={books.id} {...books}/>)}</ul>
     )
   }
 // BookList.propTypes = {
