@@ -5,12 +5,12 @@ import style from './BookList.css';
 import {addBook, removeBook, editBook} from '../actions';
 import Book from './Book';
 
-let title, author, year, genere;
-
   const BookList = (props) => {
+    console.dir(props.books.lib);
     return (
-      <div></div>
-       // <ul>{props.books.books.map(books => <Book key={books.id} {...books}/>)}</ul>
+      <div>
+        <ul>{props.books.lib.map(books => <Book key={books.id} {...books}/>)}</ul>
+      </div>
     )
   }
 // BookList.propTypes = {

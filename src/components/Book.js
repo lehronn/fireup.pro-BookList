@@ -9,14 +9,14 @@ class Book extends React.Component {
   }
 
   render() {
+    console.dir(this.props);
     return (
       <div className={style.bookList}>
-        {this.props.map(item => (
-          <span>
-            {item.title}
-            <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
-          </span>
-        ))}
+        <span>
+          {this.props.title} - {this.props.author} - {this.props.year} - {this.props.genere}
+          <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
+          <button className="removeButton" onClick={()=> this.props.edit(item.id)}>Edit</button>
+        </span>
       </div>
     );
   }
