@@ -9,10 +9,6 @@ class Book extends React.Component {
   }
 
   render() {
-    console.log('propsy w komponencie book:');
-    console.dir(this.props);
-    console.log(this.props);
-
     return (
       <div className={style.bookList}>
         {this.props.map(item => (

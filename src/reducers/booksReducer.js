@@ -3,7 +3,7 @@ import { ADD_BOOK, EDIT_BOOK, REMOVE_BOOK } from '../actions.js';
 function Books(state = {}, action) {
   switch (action.type) {
     case ADD_BOOK:
-      return Object.assign({}, state.books, {
+      return Object.assign({}, state, {
                 books: [
                 {
                   id: action.id,
@@ -14,10 +14,10 @@ function Books(state = {}, action) {
                 }
                 , ...state]
             })
-    case REMOVE_BOOK:
-      return Object.assign({}, state, {
-                books: state.books.filter(book => book.id !== action.id)
-            });
+    // case REMOVE_BOOK:
+    //   return Object.assign({}, state, {
+    //             books: state.books.filter(book => book.id !== action.id)
+    //         });
     // case EDIT_BOOK:
     //     return book;
     //   });

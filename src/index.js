@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
 import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
 import reducer from './reducers/reducer.js';
 import {addBook} from './actions';
 
-const store = createStore(reducer);
-store.subscribe(() => console.log(store.getState()))
+const logger = createLogger();
+const store = createStore(reducer, applyMiddleware(logger));
 
-store.dispatch(addBook({title: 'aaa', author: 'bbb', year: '1112', genere: 'Fantasy'}));
-store.dispatch(addBook({title: 'xxx', author: 'yyy', year: '2124', genere: 'Classics'}));
+
+store.dispatch(addBook({title: 'test', author: 'test', year: '1112', genere: 'Fantasy'}));
+
+store.subscribe(() => console.log(store.getState()))
 
 ReactDOM.render(
   <Provider store={store}>

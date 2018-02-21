@@ -28,19 +28,11 @@ class BookForm extends React.Component {
           year: e.target[2].value,
           genere: e.target[3].value
         };
-        console.log('addedBook:');
-        console.dir(addedBook);
-        console.log('propsy w on submithandler w bookform:');
-        console.dir(this.props);
-        console.log(this.props);
         return this.props.addBook(addedBook);
       }
 }
 
   render() {
-    console.log('Propsy w renderze bookform:');
-    console.dir(this.props);
-    console.log(this.props);
     return (
       <div className={style.bookForm}>
         <span>Add book here:</span>

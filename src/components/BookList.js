@@ -8,9 +8,6 @@ import Book from './Book';
 let title, author, year, genere;
 
   const BookList = (props) => {
-    console.log('propsy w komponencie booklist:');
-    console.dir(props);
-    console.log(props);
     return (
       <div></div>
        // <ul>{props.books.books.map(books => <Book key={books.id} {...books}/>)}</ul>
