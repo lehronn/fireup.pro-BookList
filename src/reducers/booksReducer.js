@@ -1,10 +1,12 @@
 import { ADD_BOOK, EDIT_BOOK, REMOVE_BOOK } from '../actions.js';
 
-function Books(state = {}, action) {
+let initialState = {lib: []};
+
+function Books(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
       return Object.assign({}, state, {
-                books: [
+                lib: [
                 {
                   id: action.id,
                   title: action.title,
@@ -12,7 +14,7 @@ function Books(state = {}, action) {
                   year: action.year,
                   genere: action.genere
                 }
-                , ...state]
+                , ...state.lib]
             })
     // case REMOVE_BOOK:
     //   return Object.assign({}, state, {
