@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid';
 import style from './App.css';
-import Title from '../components/Title';
+import Title from './titleContainer';
 import BookFormContainer from './bookFormContainer';
 import BookListContainer from './bookListContainer';
 
