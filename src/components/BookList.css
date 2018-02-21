@@ -6,7 +6,7 @@
 }
 
 ul {
-  padding: 20px;
+  padding: 5px;
 }
 
 li {
@@ -15,8 +15,10 @@ li {
   text-align: center;
   list-style: none;
   padding: 5px 5px 5px 5px;
-  margin: 10px;
+  margin: 5px;
   background-color: #303F9F;
+  margin: 0 auto;
+  color: white;
 }
 
 button {

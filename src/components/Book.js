@@ -13,9 +13,15 @@ class Book extends React.Component {
     return (
       <div className={style.bookList}>
         <span>
-          {this.props.title} - {this.props.author} - {this.props.year} - {this.props.genere}
-          <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
-          <button className="removeButton" onClick={()=> this.props.edit(item.id)}>Edit</button>
+          <ul>
+            <li>Title: {this.props.title} -
+              Author: {this.props.author} -
+              Year: {this.props.year} -
+              Genere: {this.props.genere}
+              <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
+              <button className="removeButton" onClick={()=> this.props.edit(item.id)}>Edit</button>
+            </li>
+          </ul>
         </span>
       </div>
     );
