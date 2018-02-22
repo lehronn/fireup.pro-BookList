@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import style from './BookList.css';
 import {addBook, removeBook, editBook} from '../actions';
-import Book from './Book';
+import BookContainer from '../containers/bookContainer';
 
   const BookList = (props) => {
     return (
       <div>
-        <ul>{props.books.lib.map(books => <Book key={books.id} {...books}/>)}</ul>
+        <ul>{props.books.lib.map(books => <BookContainer key={books.id} {...books}/>)}</ul>
       </div>
     )
   }

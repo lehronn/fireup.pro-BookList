@@ -8,6 +8,14 @@ class Book extends React.Component {
     super(props);
   }
 
+  removeBookHandler (e) {
+    return this.props.removeBook(this.props.id);
+  }
+
+  editBookHandler (e) {
+    return props.editBook();
+  }
+
   render() {
     return (
       <div className={style.bookList}>
@@ -17,8 +25,8 @@ class Book extends React.Component {
               Author: {this.props.author} -
               Year: {this.props.year} -
               Genere: {this.props.genere}
-              <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
-              <button className="removeButton" onClick={()=> this.props.edit(item.id)}>Edit</button>
+              <button type="submit" className="removeButton" onClick={()=> this.removeBookHandler(this.props.id)}>Delete</button>
+              <button type="submit" className="editButton" onClick={()=> this.props.edit(item.id)}>Edit</button>
             </li>
           </ul>
         </span>

@@ -16,10 +16,10 @@ function Books(state = initialState, action) {
                 }
                 , ...state.lib]
             })
-    // case REMOVE_BOOK:
-    //   return Object.assign({}, state, {
-    //             books: state.books.filter(book => book.id !== action.id)
-    //         });
+    case REMOVE_BOOK:
+      return Object.assign({}, state, {
+                lib: state.lib.filter(book => book.id !== action.id)
+            });
     // case EDIT_BOOK:
     //     return book;
     //   });

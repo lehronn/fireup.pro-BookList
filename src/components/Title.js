@@ -9,7 +9,6 @@ class Title extends React.Component {
   }
 
   render() {
-
     // counters
     var fantasyCounter = this.props.books.books.lib.filter(function(obj){return obj.genere=='Fantasy'}).length;
 

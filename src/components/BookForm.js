@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './BookForm.css';
-import {addBook, removeBook, editBook} from '../actions';
+import { addBook } from '../actions';
 import bookFormContainer from '../containers/bookFormContainer';
 
 let addedBook = {};
