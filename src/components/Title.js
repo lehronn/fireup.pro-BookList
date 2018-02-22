@@ -9,15 +9,25 @@ class Title extends React.Component {
   }
 
   render() {
-    console.dir('propsy w title.js');
-    console.dir(this.props);
+
+    // counters
+    var fantasyCounter = this.props.books.books.lib.filter(function(obj){return obj.genere=='Fantasy'}).length;
+
+    var fictionCounter = this.props.books.books.lib.filter(function(obj){return obj.genere=='Fiction'}).length;
+
+    var classicsCounter = this.props.books.books.lib.filter(function(obj){return obj.genere=='Classics'}).length;
+
     return (
       <div className={style.bookTitle}>
-      <h1>Booknatics.js</h1>
-      <p>Books:<span> {this.props.books.books.lib.length}</span></p>
-      <p>Classics:<span> {this.props.bookCount}</span></p>
-      <p>Fiction:<span> {this.props.bookCount}</span></p>
-      <p>Fantasy:<span> {this.props.bookCount}</span></p>
+        <h1>Booknatics.js</h1>
+          <p>
+            Books: {this.props.books.books.lib.length},
+          </p>
+          <p>
+            Fantasy: {fantasyCounter},
+            Fiction: {fictionCounter},
+            Classics: {classicsCounter}
+          </p>
       </div>
     );
   }

@@ -9,7 +9,6 @@ class Book extends React.Component {
   }
 
   render() {
-    console.dir(this.props);
     return (
       <div className={style.bookList}>
         <span>

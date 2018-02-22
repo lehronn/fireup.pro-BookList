@@ -6,7 +6,6 @@ import {addBook, removeBook, editBook} from '../actions';
 import Book from './Book';
 
   const BookList = (props) => {
-    console.dir(props.books.lib);
     return (
       <div>
         <ul>{props.books.lib.map(books => <Book key={books.id} {...books}/>)}</ul>
