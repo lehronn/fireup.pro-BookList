@@ -13,7 +13,18 @@ class Book extends React.Component {
   }
 
   editBookHandler (e) {
-    return props.editBook();
+    let editedBook = {
+      id: this.props.id,
+      title: prompt("Enter new title for book."),
+      author: prompt("Enter new author for book."),
+      year : prompt("Enter new year for book."),
+      genere : prompt("Enter new gener for book. Choose between Fantasy, Fiction or Classics.")
+    }
+    // if (editedBook.genere!== "Fantasy" || "Classics" || "Fiction")
+    // {
+    //   genere : prompt("Enter new gener for book. Choose between Fantasy, Fiction or Classics.")
+    // }
+      return this.props.editBook(editedBook);
   }
 
   render() {
@@ -26,7 +37,7 @@ class Book extends React.Component {
               Year: {this.props.year} -
               Genere: {this.props.genere}
               <button type="submit" className="removeButton" onClick={()=> this.removeBookHandler(this.props.id)}>Delete</button>
-              <button type="submit" className="editButton" onClick={()=> this.props.edit(item.id)}>Edit</button>
+              <button type="submit" className="editButton" onClick={()=> this.editBookHandler(this.props.id)}>Edit</button>
             </li>
           </ul>
         </span>

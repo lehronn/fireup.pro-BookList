@@ -15,14 +15,22 @@ function Books(state = initialState, action) {
                   genere: action.genere
                 }
                 , ...state.lib]
-            })
+            });
     case REMOVE_BOOK:
       return Object.assign({}, state, {
                 lib: state.lib.filter(book => book.id !== action.id)
             });
-    // case EDIT_BOOK:
-    //     return book;
-    //   });
+    case EDIT_BOOK:
+      return Object.assign(state.lib, [
+                {
+                  id: action.id,
+                  title: action.title,
+                  author: action.author,
+                  year: action.year,
+                  genere: action.genere
+                }
+                , ...state.lib]
+      );
 
     default:
       return state;

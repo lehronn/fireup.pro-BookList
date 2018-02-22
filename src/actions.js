@@ -15,13 +15,13 @@ export const addBook = (addedBook) => ({
   genere : addedBook.genere
 });
 
-export const editBook = (id) => ({
+export const editBook = (editedBook) => ({
   type: 'EDIT_BOOK',
-  id,
-  title,
-  author,
-  year,
-  genere
+  id: editedBook.id,
+  title: editedBook.title,
+  author: editedBook.author,
+  year: editedBook.year,
+  genere : editedBook.genere
 });
 
 export const removeBook = (id) => ({
